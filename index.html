@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Clima</title>
+    <style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr; /* Nueva fila para el título h1 */
+        background-color: #e0e0e0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container {
+        padding: 20px;
+        text-align: center;
+        background-color: #e0e0e0;
+        margin: 0;
+        border: none; 
+    }
+
+    #info-clima {
+        width: 94%;
+        background-color: #e0e0e0;
+    }
+
+    #buscar {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #busqueda {
+        width: 100%;
+    }
+
+    .card-body {
+        text-align: left;
+    }
+
+    h1 {
+        grid-column: 1 / span 2;
+        text-align: center;
+        margin-top: 0; 
+    }
+    </style>
+</head>
+<body>
+    <h1>App Clima</h1>
+    <div class="container" id="info-clima">
+        <h2>Clima Local</h2>
+        <h2>Ciudad:</h2>
+        <h2><span>ºC</span></h2>
+    </div>
+    <div class="container">
+        <form id="buscar">
+            <h2>Consultar Clima en Otra Ciudad</h2>
+            <div class="input-group flex-nowrap border-info">
+              <input id="busqueda" type="text" class="form-control" placeholder="Buscar ciudad" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+          </form> 
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Ciudad: <span id="city"></span></h3>
+                <h3 class="card-text">Temperatura: <span id='temp'></span>°C</p></h3>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
+
